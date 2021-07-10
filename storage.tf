@@ -12,7 +12,11 @@ resource "azurerm_storage_account" "autoioc-sa" {
   location                 = azurerm_resource_group.autoioc-rg.location
   account_tier             = "Standard"
   account_replication_type = "GRS"
-  min_tls_version = "TLS1_2"
+  min_tls_version          = "TLS1_2"
+
+  network_rules {
+    bypass = ["Azure Services"]
+  }
 
   tags = var.all-tags
 
