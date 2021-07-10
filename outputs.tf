@@ -43,54 +43,54 @@ output "vm-rg" {
 # vnet
 output "vnet-name" {
   description = "Auto-IOC vnet name"
-  value = azurerm_virtual_network.vnet.name
+  value       = azurerm_virtual_network.vnet.name
 }
 
 output "vnet-location" {
   description = "Auto-IOC vnet location"
-  value = azurerm_virtual_network.vnet.location
+  value       = azurerm_virtual_network.vnet.location
 }
 
 output "vnet-address-space" {
   description = "Auto-IOC vnet address space"
-  value = azurerm_virtual_network.vnet.address_space
+  value       = azurerm_virtual_network.vnet.address_space
 }
 
 # subnet
 output "subnet-name" {
   description = "Auto-IOC subnet name"
-  value = azurerm_subnet.subnet.name
+  value       = azurerm_subnet.subnet.name
 }
 
 output "subnet-vnet-name" {
   description = "Auto-IOC subnet's vnet name"
-  value = azurerm_subnet.subnet.virtual_network_name
+  value       = azurerm_subnet.subnet.virtual_network_name
 }
 
 output "subnet-address-prefix" {
   description = "Auto-IOC subnet's address prefix"
-  value = azurerm_subnet.subnet.address_prefixes
+  value       = azurerm_subnet.subnet.address_prefixes
 }
 
 output "subnet-endpoints" {
   description = "Auto-IOC subnet's service endpoints"
-  value = azurerm_subnet.subnet.service_endpoints
+  value       = azurerm_subnet.subnet.service_endpoints
 }
 
 # nic
 output "nic-name" {
   description = "Auto-IOC vnet's nic name"
-  value = azurerm_network_interface.nic.name
+  value       = azurerm_network_interface.nic.name
 }
 
 output "nic-location" {
   description = "Auto-IOC vnet's nic location"
-  value = azurerm_network_interface.nic.location
+  value       = azurerm_network_interface.nic.location
 }
 
 output "nic-ip-config" {
   description = "Auto-IOC vnet's nic ip configuration"
-  value = azurerm_network_interface.nic.ip_configuration
+  value       = azurerm_network_interface.nic.ip_configuration
 }
 
 # storage

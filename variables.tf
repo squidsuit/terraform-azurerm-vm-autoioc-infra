@@ -25,7 +25,7 @@ variable "all-tags" {
 }
 
 variable "vmadmin" {
-  type = string
+  type        = string
   description = "Admin name for the autoioc vm"
-  default = "azureuser"
+  default     = "azureuser"
 }
