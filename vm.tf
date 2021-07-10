@@ -5,8 +5,8 @@ resource "azurerm_linux_virtual_machine" "autoioc-vm" {
   size                = "Standard_DS1_V2"
   admin_username      = var.vmadmin
 
-  // TODO: Figure out the best way to get a remnux image here
-  # source_image_id = data.azurerm_image.remnux-image.id
+  // TODO: Figure out the best way to get a autoioc image here
+  # source_image_id = data.azurerm_image.autoioc-image.id
 
   network_interface_ids = [
     azurerm_network_interface.nic.id,

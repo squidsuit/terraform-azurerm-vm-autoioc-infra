@@ -28,7 +28,7 @@ resource "azurerm_network_interface" "nic" {
     name                          = "internal"
     subnet_id                     = azurerm_subnet.subnet.id
     private_ip_address_allocation = "Dynamic"
-    public_ip_address_id          = azurerm_public_ip.public-ip-remnux-nic.id
+    public_ip_address_id          = azurerm_public_ip.public-ip-autoioc-nic.id
   }
 }
 
@@ -37,8 +37,8 @@ resource "azurerm_network_interface_security_group_association" "autoioc-nsg-ass
   network_security_group_id = azurerm_network_security_group.autoioc-nsg.id
 }
 
-resource "azurerm_public_ip" "public-ip-remnux-nic" {
-  name                = "remnux-public-ip"
+resource "azurerm_public_ip" "public-ip-autoioc-nic" {
+  name                = "autoioc-public-ip"
   location            = azurerm_resource_group.autoioc-rg.location
   resource_group_name = azurerm_resource_group.autoioc-rg.name
   allocation_method   = "Static"
